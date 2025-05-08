@@ -56,6 +56,7 @@ acc3 = BankAccount("Mike", 1500)
 
 print(acc2.show_balance())
 print(acc1)
+print(acc1.bank_name)
 print(acc1.deposit(500,2000))
 print(acc1.withdraw(500,2000))
 print(acc2.transfer(acc1,1500,2000))
