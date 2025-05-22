@@ -11,6 +11,18 @@ class BankAccount:
         self._balance = balance # protected attribute
         self.__transaction_id = 2000  # private attribute
 
+    @classmethod
+    def change_bankname(cls, new_name):
+        cls.bank_name = new_name
+        return f"The bank name has been changed into {cls.bank_name}"
+    
+    @staticmethod # for example id must be 4 digit
+    def id_check(id):
+        if len(id) != 4:
+            return f"transaction id must be 4 digit."
+        elif len(id) == 4:
+            return f"you transaction id is valid"
+    
     def __verify_transaction(self, given_id):  # private method
         return given_id == self.__transaction_id
 
