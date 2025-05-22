@@ -8,7 +8,7 @@ class BankAccount:
 
     def __init__(self, name, balance):
         self.name = name
-        self._balance = balance
+        self._balance = balance # protected attribute
         self.__transaction_id = 2000  # private attribute
 
     def __verify_transaction(self, given_id):  # private method
