@@ -13,3 +13,4 @@ For python Programming language, its OOP basic fundamentals have at least 12 key
 10.  **Polymorphism** – One interface, many forms (e.g., method overriding).
 11.  __str__ and __repr__ – Custom string display.
 12.  **Object Comparison** (__eq__, __lt__, etc.)
+![image](https://github.com/user-attachments/assets/8e609d2f-0e91-4f9b-9c22-2c294da3c24d)
