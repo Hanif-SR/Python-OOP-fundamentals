@@ -7,7 +7,7 @@ class BankAccount:
     bank_name = "TrustBank"
 
     def __init__(self, name, balance):
-        self.name = name
+        self.name = name # normal attribute
         self._balance = balance # protected attribute
         self.__transaction_id = 2000  # private attribute
 
