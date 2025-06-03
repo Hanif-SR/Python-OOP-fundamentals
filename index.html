@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Simple Openning Page</title>
+        <style>
+            :root {
+                --primary-color: darkorange;
+                --secondary-color: brown;
+                --background-color: #f9f9f9;
+                --text-color: #333;
+                --header-height: 60px;
+                --border-radius: 8px;
+                --shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background-color: var(--background-color);
+                color: var(--text-color);
+                line-height: 1.6;
+            }
+            header {
+                background-color: var(--primary-color);
+                color: white;
+                height: var(--header-height);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1.5rem;
+                box-shadow: var(--shadow);
+            }
+            header h1 {
+                font-weight: 700;
+                font-size: 1.5rem;
+                margin: 0;
+            }
+            nav a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                margin-left: 1.25rem;
+                transition: color 0.3s ease;
+            }
+            nav a:hover {
+                color: var(--secondary-color);
+            }
+            main {
+                max-width: 960px;
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+            section {
+                background: white;
+                padding: 1.5rem 2rem;
+                border-radius: var(--border-radius);
+                box-shadow: var(--shadow);
+                margin-bottom: 2rem;
+            }
+            section h2 {
+                color: var(--primary-color);
+                margin-top: 0;
+            }
+            button {
+                background-color: var(--primary-color);
+                color: white;
+                padding: 0.75rem 1.5rem;
+                border: none;
+                border-radius: var(--border-radius);
+                cursor: pointer;
+                font-size: 1rem;
+                transition: background-color 0.3s ease;
+            }
+            button:hover {
+                background-color: var(--secondary-color);
+            }
+            .footer {
+                text-align: center;
+                padding: 1rem;
+                color: #777;
+                font-size: 0.9rem;
+            }
+            /* Responsive */
+            @media (max-width: 600px) {
+                header {
+                    flex-direction: column;
+                    height: auto;
+                    padding: 1rem;
+                }
+                nav {
+                    margin-top: 0.5rem;
+                }
+                nav a {
+                    margin-left: 0.75rem;
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome!</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <section id="about">
+                <h2>About the page</h2>
+                <p>
+                    This page is only an example
+                </p>
+            </section>
+            <section id="services">
+                <h2>Description</h2>
+                <ul>
+                    <li>Custom web design</li>
+                    <li>Responsive development</li>
+                    <li>SEO optimization</li>
+                    <li>24/7 Support</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>Have questions or want to get in touch? Click below to show contact info.</p>
+                <button id="contactBtn">Show Contact Info</button>
+                <p id="contactInfo" style="margin-top: 1rem; display:none;">
+                    Email: <a href="mailto:info@practicalpage.com">examplepage@gmail.com</a><br/>
+                    Phone: +1 (555) 123-4567
+                </p>
+            </section>
+        </main>
+        <footer class="footer">
+            &copy; 2025 Example copyright. All rights reserved.
+        </footer>
+        <script>
+            const contactBtn = document.getElementById('contactBtn');
+            const contactInfo = document.getElementById('contactInfo');
+            <!-- lol -->
+            contactBtn.addEventListener('click', () => {
+                if (contactInfo.style.display === 'none') {
+                    contactInfo.style.display = 'block';
+                    contactBtn.textContent = 'Hide Contact Info';
+                } else {
+                    contactInfo.style.display = 'none';
+                    contactBtn.textContent = 'Show Contact Info';
+                }
+            });
+        </script>
+    </body>
+</html>
